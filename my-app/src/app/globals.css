@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #030e50;
+  --color-secundary:#e8e6e7;
+
+  --font-size-title: 70px;
+  --font-size-subtitle: 55px;
+  --font-size-topics:35px;
+  --font-size-subtopics:17px;
+  --font-size-text:16px;
+  --font-size-description:14px;
+
 }
 
 body {
