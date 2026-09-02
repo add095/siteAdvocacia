@@ -1,33 +1,98 @@
-import Image from "next/image";
-import Header from "../atoms/Header";
 import Link from "next/link";
 import "@/app/globals.css";
 
 export default function HeroMain() {
   return (
-    <section className="a h-screen bg-[url('/heroImage.jpg')] bg-cover bg-no-repeat bg-center">
-      <div className="b bg-black/70 h-full flex pt-[7rem]">
-        <div className="c pl-[5rem] pr-[8rem] flex-1">
-          <div className="d flex justify-center flex-col w-[100%] h-full ">
-            <h1 className="e text-title text-white font-bold leading-none font-poppins">
-              Medicamento <br/>de alto custo<br/> negado?
+    <section className="
+      h-screen 
+      bg-[url('/heroImage.jpg')] 
+      bg-cover 
+      bg-no-repeat 
+      bg-center
+    ">
+      <div className="
+        bg-black/70 
+        h-full 
+        flex 
+        pt-[5rem] 
+        md:pt-[7rem]
+      ">
+        <div className="
+          px-[1.5rem]
+          sm:px-[2.5rem]
+          md:px-[4rem]
+          lg:pl-[5rem]
+          lg:pr-[8rem]
+          flex-1
+        ">
+          <div className="
+            flex 
+            justify-center 
+            flex-col 
+            w-full 
+            h-full
+          ">
+            
+            <h1 className="
+              text-title 
+              text-white 
+              font-bold 
+              leading-none 
+              font-poppins
+            ">
+              Medicamento <br />
+              de alto custo <br />
+              negado?
             </h1>
 
-            <div className="f flex justify-between w-[100%] mt-[2rem]">
-             <p className="g text-[2rem] text-white">
+            <div className="
+              flex 
+              flex-col
+              md:flex-row
+              md:items-center
+              md:justify-between
+              gap-[1.5rem]
+              w-full 
+              mt-[2rem]
+            ">
+              
+              <p className="
+                text-white 
+                text-[1.25rem]
+                sm:text-[1.5rem]
+                md:text-[1.75rem]
+                lg:text-[2rem]
+                max-w-[700px]
+              ">
                 Entenda seus direitos antes de aceitar a negativa.
               </p>
 
-              <Link href={""} className="
-              bg-primary rounded-[100px]
-              text-subtopics text-white font-bold 
-              flex items-center justify-center text-nowrap   
-              pr-[clamp(1.5rem,2.5rem,5rem)] pt-[1rem] pb-[1rem] pl-[clamp(1.5rem,2.5rem,5rem)]
-             ">QUERO ORIENTAÇÃO</Link>
+              <Link
+                href={""}
+                className="
+                  bg-primary 
+                  rounded-[100px] 
+                  text-subtopics 
+                  text-white 
+                  font-bold 
+                  flex 
+                  items-center 
+                  justify-center 
+                  text-nowrap
+                  w-fit
+                  px-[1.5rem]
+                  py-[0.8rem]
+                  sm:px-[2rem]
+                  sm:py-[1rem]
+                  lg:px-[2.5rem]
+                "
+              >
+                QUERO ORIENTAÇÃO
+              </Link>
+
             </div>
 
           </div>
-
         </div>
       </div>
     </section>
