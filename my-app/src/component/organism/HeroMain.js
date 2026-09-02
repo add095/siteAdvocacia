@@ -34,7 +34,10 @@ export default function HeroMain() {
           ">
             
             <h1 className="
-              text-title 
+              text-[2.5rem]
+              sm:text-[4rem]
+              md:text-[4.5rem]
+              lg:text-[5rem]
               text-white 
               font-bold 
               leading-none 
