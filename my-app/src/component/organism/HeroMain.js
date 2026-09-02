@@ -5,23 +5,29 @@ import "@/app/globals.css";
 
 export default function HeroMain() {
   return (
-    <section className="h-[100vh] w-screen bg-[url('/heroImage.jpg')] bg-cover bg-no-repeat bg-center">
-      <div className="bg-black/70 h-full w-full">
-        
-        <div className="mt-18 ml-20 grid grid-cols-2">
-          <div>
-            <h1 className="text-title w-[30rem] text-white font-bold leading-tight font-poppins">
-              Medicamento de alto custo negado?
+    <section className="a h-screen bg-[url('/heroImage.jpg')] bg-cover bg-no-repeat bg-center">
+      <div className="b bg-black/70 h-full flex pt-[7rem]">
+        <div className="c pl-[5rem] pr-[8rem] flex-1">
+          <div className="d flex justify-center flex-col w-[100%] h-full ">
+            <h1 className="e text-title text-white font-bold leading-none font-poppins">
+              Medicamento <br/>de alto custo<br/> negado?
             </h1>
 
-            <p className="text-[2rem] text-white mt-[2rem]">
-              Entenda seus direitos antes de aceitar a negativa.
-            </p>
+            <div className="f flex justify-between w-[100%] mt-[2rem]">
+             <p className="g text-[2rem] text-white">
+                Entenda seus direitos antes de aceitar a negativa.
+              </p>
+
+              <Link href={""} className="
+              bg-primary rounded-[100px]
+              text-subtopics text-white font-bold 
+              flex items-center justify-center text-nowrap   
+              pr-[clamp(1.5rem,2.5rem,5rem)] pt-[1rem] pb-[1rem] pl-[clamp(1.5rem,2.5rem,5rem)]
+             ">QUERO ORIENTAÇÃO</Link>
+            </div>
+
           </div>
 
-          <div className="flex items-end justify-end ">
-              <Link href={""} className="mt-[20rem] mr-[2.5rem] bg-primary text-texto text-white font-bold pl-[3.5rem] pr-[3.5rem] pt-[1rem] pb-[1rem] rounded-[100px]">QUERO ORIENTAÇÃO</Link>
-          </div>
         </div>
       </div>
     </section>
