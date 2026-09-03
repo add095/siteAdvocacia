@@ -88,6 +88,9 @@ export default function HeroMain() {
                   sm:px-[2rem]
                   sm:py-[1rem]
                   lg:px-[2.5rem]
+
+                  hover:bg-[#020d40]
+
                 "
               >
                 QUERO ORIENTAÇÃO
