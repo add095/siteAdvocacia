@@ -21,7 +21,7 @@ export async function POST(request) {
     const { data, error } = await resend.emails.send({
       from: "Formulário <onboarding@resend.dev>",
 
-      to: ["emanuel_fb_souza@estudante.sesisenai.org.br"],
+      to: ["emanuelfilipi095@gmail.com"],
 
       subject: `Novo formulário - ${nome}`,
 
