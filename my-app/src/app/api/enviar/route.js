@@ -21,7 +21,6 @@ export async function POST(request) {
     const { data, error } = await resend.emails.send({
       from: "Formulário <onboarding@resend.dev>",
 
-      // COLOQUE SEU GMAIL AQUI
       to: ["emanuel_fb_souza@estudante.sesisenai.org.br"],
 
       subject: `Novo formulário - ${nome}`,
@@ -32,13 +31,11 @@ export async function POST(request) {
         <hr />
 
         <p>
-          <strong>Nome:</strong>
-          ${nome}
+          <strong>Nome:</strong> ${nome}
         </p>
 
         <p>
-          <strong>Telefone:</strong>
-          ${telefone}
+          <strong>Telefone:</strong> ${telefone}
         </p>
 
         <p>
@@ -46,12 +43,13 @@ export async function POST(request) {
         </p>
 
         <ul>
-          ${interesses?.length
-          ? interesses
-            .map((interesse) => `<li>${interesse}</li>`)
-            .join("")
-          : "<li>Nenhum interesse selecionado</li>"
-        }
+          ${
+            interesses?.length
+              ? interesses
+                  .map((interesse) => `<li>${interesse}</li>`)
+                  .join("")
+              : "<li>Nenhum interesse selecionado</li>"
+          }
         </ul>
 
         <p>
@@ -61,10 +59,7 @@ export async function POST(request) {
         <p>
           ${outroCaso || "Nenhuma informação adicional."}
         </p>
-
       `,
-
-
     });
 
     console.log("📬 Resposta do Resend:", {
@@ -73,31 +68,42 @@ export async function POST(request) {
     });
 
     if (error) {
-      console.error(error);
+      console.error("❌ ERRO DO RESEND:", error);
 
       return Response.json(
         {
           success: false,
           error: error.message,
         },
-        { status: 400 }
+        {
+          status: 400,
+        }
       );
     }
 
-    return Response.json({
-      success: true,
-      data,
-    });
+    console.log("✅ E-mail enviado com sucesso:", data);
+
+    return Response.json(
+      {
+        success: true,
+        data,
+      },
+      {
+        status: 200,
+      }
+    );
 
   } catch (error) {
-    console.error(error);
+    console.error("💥 ERRO INTERNO:", error);
 
     return Response.json(
       {
         success: false,
         error: "Erro interno ao enviar o formulário.",
       },
-      { status: 500 }
+      {
+        status: 500,
+      }
     );
   }
 }
