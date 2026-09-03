@@ -11,6 +11,13 @@ export async function POST(request) {
       outroCaso,
     } = await request.json();
 
+    console.log("📨 Dados recebidos:", {
+      nome,
+      telefone,
+      interesses,
+      outroCaso,
+    });
+
     const { data, error } = await resend.emails.send({
       from: "Formulário <onboarding@resend.dev>",
 
@@ -39,13 +46,12 @@ export async function POST(request) {
         </p>
 
         <ul>
-          ${
-            interesses?.length
-              ? interesses
-                  .map((interesse) => `<li>${interesse}</li>`)
-                  .join("")
-              : "<li>Nenhum interesse selecionado</li>"
-          }
+          ${interesses?.length
+          ? interesses
+            .map((interesse) => `<li>${interesse}</li>`)
+            .join("")
+          : "<li>Nenhum interesse selecionado</li>"
+        }
         </ul>
 
         <p>
@@ -55,7 +61,15 @@ export async function POST(request) {
         <p>
           ${outroCaso || "Nenhuma informação adicional."}
         </p>
+
       `,
+
+
+    });
+
+    console.log("📬 Resposta do Resend:", {
+      data,
+      error,
     });
 
     if (error) {
