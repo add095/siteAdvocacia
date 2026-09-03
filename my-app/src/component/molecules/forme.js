@@ -240,12 +240,6 @@ export default function Forms() {
         {enviando ? "Enviando..." : "Enviar"}
       </button>
 
-      {/* AVISO */}
-      <p className="text-center text-[7px] text-gray-500">
-        Seu nome de perfil no Canva não será compartilhado.
-        Nunca envie senhas.
-      </p>
-
     </form>
   );
 }
