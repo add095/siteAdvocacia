@@ -15,7 +15,7 @@ export async function POST(request) {
       from: "Formulário <onboarding@resend.dev>",
 
       // COLOQUE SEU GMAIL AQUI
-      to: ["seugmail@gmail.com"],
+      to: ["emanuelfilipi095@gmail.com"],
 
       subject: `Novo formulário - ${nome}`,
 
