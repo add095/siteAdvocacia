@@ -31,12 +31,14 @@ export default function Informative() {
                                 eading-none
                                 ont-poppins
                                 -[2rem]
+                                 leading-none 
           ">
                         Casos em que<br />
                         orientamos:
                     </h2>
 
                     <ul className="
+                                mt-[1.5rem]
                                 list-disc
                                 pl-6
                                 sm:pl-8

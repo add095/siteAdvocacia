@@ -1,29 +1,48 @@
-import Image from "next/image";
-import Forme from "../molecules/forme"
-export default function forms() {
-  return (
-    <section className="bg-white">
-      <div className="min-h-screen flex flex-col lg:flex-row justify-center lg:justify-around items-center gap-[3rem] px-[1.5rem] py-[5rem] sm:px-[2.5rem] md:px-[4rem] lg:px-[5rem]">
+import Forme from "@/component/molecules/forme"
 
-        <div className="w-full lg:w-auto">
-          <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] text-primary font-bold eading-none ont-poppins-[2rem]">
-            Medicamento negado?<br />
+export default function Forms() {
+  return (
+    <section className="bg-primary">
+      <div
+        className="
+          min-h-screen
+          flex
+          flex-col
+          lg:flex-row
+          items-center
+          lg:gap-20
+          px-6
+          py-10
+          sm:px-10
+          md:px-16
+          lg:px-20
+        "
+      >
+
+        {/* TEXTO */}
+        <div className="w-full max-w-[700px] lg:w-[700px]">
+          <h2
+            className="
+              text-[2rem]
+              leading-[3.75rem]
+              sm:text-[2.5rem]
+              md:text-[3rem]
+              lg:text-[3.5rem]
+              text-secundary
+              font-bold
+              font-poppins
+            "
+          >
+            <span className="font-bold">Medicamento negado?</span> <br />
             Comece por aqui?
           </h2>
-          <ul className="text-primary font-poppins">
-            <li className="font-bold text-[1rem] sm:text-[1.5rem] md:text-[1.5rem]">Passo 1: Solicite a negativa formal</li>
-            <li>Peça o motivo da recusa por escrito.</li>
-            <li className="font-bold text-[1rem] sm:text-[1.5rem] md:text-[1.5rem]" >Passo 2: Organize os documentos médicos</li>
-            <li>Prescrição, relatório, exames e histórico de tratamento</li>
-            <li className="font-bold text-[1rem] sm:text-[1.5rem] md:text-[1.5rem]">Passo 3: Guarde protocolos e mensagens</li>
-            <li>Registre toda tentativa de solicitação ou resposta recebida.</li>
-            <li className="font-bold text-[1rem] sm:text-[1.5rem] md:text-[1.5rem]">Passo 4: Procure orientação especializada</li>
-            <li>Cada caso exige análise individual e documentação adequada.</li>
-          </ul>
         </div>
-        <div className="w-full lg:w-auto flex justify-center">
-          <Forme/>
+
+        {/* FORMULÁRIO */}
+        <div className="w-full max-w-[500px] lg:w-[750px]">
+          <Forme />
         </div>
+
       </div>
     </section>
   );
