@@ -1,0 +1,109 @@
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST(request) {
+  try {
+    const {
+      nome,
+      telefone,
+      interesses,
+      outroCaso,
+    } = await request.json();
+
+    console.log("📨 Dados recebidos:", {
+      nome,
+      telefone,
+      interesses,
+      outroCaso,
+    });
+
+    const { data, error } = await resend.emails.send({
+      from: "Formulário <onboarding@resend.dev>",
+
+      to: ["emanuelfilipi095@gmail.com"],
+
+      subject: `Novo formulário - ${nome}`,
+
+      html: `
+        <h2>Novo contato pelo formulário</h2>
+
+        <hr />
+
+        <p>
+          <strong>Nome:</strong> ${nome}
+        </p>
+
+        <p>
+          <strong>Telefone:</strong> ${telefone}
+        </p>
+
+        <p>
+          <strong>Interesses:</strong>
+        </p>
+
+        <ul>
+          ${
+            interesses?.length
+              ? interesses
+                  .map((interesse) => `<li>${interesse}</li>`)
+                  .join("")
+              : "<li>Nenhum interesse selecionado</li>"
+          }
+        </ul>
+
+        <p>
+          <strong>Outro caso:</strong>
+        </p>
+
+        <p>
+          ${outroCaso || "Nenhuma informação adicional."}
+        </p>
+      `,
+    });
+
+    console.log("📬 Resposta do Resend:", {
+      data,
+      error,
+    });
+
+    if (error) {
+      console.error("❌ ERRO DO RESEND:", error);
+
+      return Response.json(
+        {
+          success: false,
+          error: error.message,
+        },
+        {
+          status: 400,
+        }
+      );
+    }
+
+    console.log("✅ E-mail enviado com sucesso:", data);
+
+    return Response.json(
+      {
+        success: true,
+        data,
+      },
+      {
+        status: 200,
+      }
+    );
+
+  } catch (error) {
+    console.error("💥 ERRO INTERNO:", error);
+
+    return Response.json(
+      {
+        success: false,
+        error: "Erro interno ao enviar o formulário.",
+      },
+      {
+        status: 500,
+      }
+    );
+  }
+}
