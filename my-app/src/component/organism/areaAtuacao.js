@@ -1,25 +1,15 @@
-import {
-  CircleX,
-  Pill,
-  HeartPulse,
-  Ribbon,
-  Puzzle,
-  Shapes,
-  Hospital,
-  CirclePlus,
-  Flower2,
-} from "lucide-react";
+import Image from "next/image";
 
 const areas = [
-  { nome: "Negativas de plano de saúde", icone: CircleX },
-  { nome: "Medicamentos de alto custo", icone: Pill },
-  { nome: "Oncologia", icone: HeartPulse },
-  { nome: "Doenças raras", icone: Ribbon },
-  { nome: "TEA e terapias", icone: Puzzle },
-  { nome: "BPC/LOAS", icone: Shapes },
-  { nome: "Home care", icone: Hospital },
-  { nome: "Tratamentos pelo SUS", icone: CirclePlus },
-  { nome: "Cirurgias e procedimentos", icone: Flower2 },
+  { nome: "Negativas de plano de saúde", icone: "/svgs/X.svg" },
+  { nome: "Medicamentos de alto custo", icone: "/svgs/pilula.svg" },
+  { nome: "Oncologia", icone: "/svgs/coracao.svg" },
+  { nome: "Doenças raras", icone: "/svgs/laco.svg" },
+  { nome: "TEA e terapias", icone: "/svgs/autismo.svg" },
+  { nome: "BPC/LOAS", icone: "/svgs/losangulo.svg" },
+  { nome: "Home care", icone: "/svgs/hospital.svg" },
+  { nome: "Tratamentos pelo SUS", icone: "/svgs/cruz.svg" },
+  { nome: "Cirurgias e procedimentos", icone: "/svgs/flor.svg" },
 ];
 
 export default function AreasAtuacao() {
@@ -56,59 +46,64 @@ export default function AreasAtuacao() {
           sm:gap-3
         "
       >
-        {areas.map((area, index) => {
-          const Icone = area.icone;
+        {areas.map((area, index) => (
+          <div
+            key={index}
+            className="
+              w-full
+              h-[105px]
+              sm:h-[115px]
+              lg:h-[125px]
+              bg-[#f1f2f3]
+              flex
+              flex-col
+              items-center
+              justify-center
+              text-center
+              px-2
+              sm:px-4
+              transition
+              hover:bg-[#e9eaec]
+            "
+          >
 
-          return (
-            <div
-              key={index}
+            {/* Ícone SVG */}
+            <Image
+              src={area.icone}
+              alt=""
+              width={44}
+              height={44}
               className="
-                w-full
-                h-[105px]
-                sm:h-[115px]
-                lg:h-[125px]
-                bg-[#f1f2f3]
-                flex
-                flex-col
-                items-center
-                justify-center
-                text-center
-                px-2
-                sm:px-4
-                transition
-                hover:bg-[#e9eaec]
+                w-[38px]
+                h-[38px]
+                sm:w-[44px]
+                sm:h-[44px]
+                object-contain
+                mb-1.5
+                sm:mb-2
+              "
+            />
+
+            {/* Nome */}
+            <h3
+              className="
+                text-[0.75rem]
+                sm:text-[0.9rem]
+                md:text-[1.05rem]
+                lg:text-[1.2rem]
+                leading-tight
+                font-semibold
+                font-poppins
+                text-[#27313D]
               "
             >
-              <Icone
-                size={38}
-                className="
-                  text-[#9bc3ec]
-                  mb-1.5
-                  sm:mb-2
-                  sm:w-[44px]
-                  sm:h-[44px]
-                "
-                strokeWidth={2}
-              />
+              {area.nome}
+            </h3>
 
-              <h3
-                className="
-                  text-[0.75rem]
-                  sm:text-[0.9rem]
-                  md:text-[1.05rem]
-                  lg:text-[1.2rem]
-                  leading-tight
-                  font-semibold
-                  font-poppins
-                  text-[#27313D]
-                "
-              >
-                {area.nome}
-              </h3>
-            </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
+
     </section>
   );
 }
