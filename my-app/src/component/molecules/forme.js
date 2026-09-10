@@ -74,7 +74,7 @@ export default function Forms() {
               leading-none 
               font-poppins
       ">
-        Quero orientações com um especialista! 
+        Quero orientações com um advogado! 
       </h3>
       {/* NOME */}
       <div>
@@ -147,8 +147,8 @@ export default function Forms() {
               gap-2
               w-full
               min-h-[45px]
-              bg-gray-200
-              hover:bg-gray-300
+              bg-gray-300
+              hover:bg-gray-400
               rounded-sm
               px-2.5
               cursor-pointer
@@ -174,8 +174,8 @@ export default function Forms() {
               gap-2
               w-full
               min-h-[45px]
-              bg-gray-200
-              hover:bg-gray-300
+              bg-gray-300
+              hover:bg-gray-400
               rounded-sm
               px-2.5
               cursor-pointer
@@ -201,8 +201,8 @@ export default function Forms() {
               gap-2
               w-full
               min-h-[45px]
-              bg-gray-200
-              hover:bg-gray-300
+              bg-gray-300
+              hover:bg-gray-400
               rounded-sm
               px-2.5
               cursor-pointer

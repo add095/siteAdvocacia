@@ -6,21 +6,21 @@ export default function QuemEstaFrente() {
   const profissionais = [
     {
       nome: "Simone Bueno",
-      cargo: "oab / pr - 47.260",
+      cargo: "OAB / PR - 47.260",
       imagem: "/simone.jpg",
       descricao:
         "Atua em casos de negativas de plano, medicamentos de alto custo e tratamentos complexos, com experiência e análise cuidadosa dos documentos.",
     },
     {
       nome: "Cyrce Sousa",
-      cargo: "oab / pr - 65.138",
+      cargo: "OAB / PR - 65.138",
       imagem: "/cyrce.jpg",
       descricao:
         "Atua em demandas de saúde, terapias e direitos da pessoa autista, unindo vivência, técnica e acolhimento na condução dos casos.",
     },
     {
       nome: "Sheila Alves",
-      cargo: "oab / pr - 82.531",
+      cargo: "OAB / PR - 82.531",
       imagem: "/sheila.jpg",
       descricao:
         "Atua com orientação responsável para pessoas e famílias que precisam de segurança em benefícios, proteção social e demandas relacionadas ao autismo.",

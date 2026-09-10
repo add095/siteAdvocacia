@@ -29,12 +29,12 @@ export default function Forms() {
               md:text-[3rem]
               lg:text-[3.5rem]
               text-secundary
-              font-bold
+              font-normal
               font-poppins
             "
           >
             <span className="font-bold">Medicamento negado?</span> <br />
-            Comece por aqui?
+            Comece por aqui.
           </h2>
         </div>
 
