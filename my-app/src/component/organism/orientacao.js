@@ -23,8 +23,18 @@ const passos = [
 
 export default function ComoFunciona() {
   return (
-    <section className="w-full bg-[#f5f5f5] px-[5.5rem] py-16 sm:py-25">
-
+    <section
+      className="
+        w-full
+        bg-[#f5f5f5]
+        px-4
+        sm:px-10
+        md:px-16
+        lg:px-[5.5rem]
+        py-16
+        sm:py-25
+      "
+    >
       {/* Título */}
       <h2
         className="
@@ -33,7 +43,7 @@ export default function ComoFunciona() {
           font-bold
           font-poppins
           leading-[0.95]
-          text-[2.5rem]
+          text-[2rem]
           sm:text-[3.5rem]
           md:text-[4rem]
           mb-10
@@ -41,11 +51,15 @@ export default function ComoFunciona() {
       >
         Como funciona a
         <br />
-       <span className="
-            text-[4rem] 
+        <span
+          className="
+            text-[2.5rem]
             sm:text-[4.5rem]
-            md:text-[5rem]"
-            >orientação jurídica?</span>
+            md:text-[5rem]
+          "
+        >
+          orientação jurídica?
+        </span>
       </h2>
 
       {/* Passos */}
@@ -57,6 +71,7 @@ export default function ComoFunciona() {
           grid-cols-1
           sm:grid-cols-2
           gap-3
+          justify-items-center
         "
       >
         {passos.map((passo, index) => (
@@ -67,7 +82,8 @@ export default function ComoFunciona() {
               text-white
               rounded-[10px]
               min-h-[120px]
-              min-w-[250px]
+              w-full
+              max-w-[400px]
               px-4
               py-3
               flex
@@ -84,7 +100,7 @@ export default function ComoFunciona() {
               className="
                 font-bold
                 font-poppins
-                text-[17px]
+                text-[20px]
                 leading-none
                 mb-2
               "
@@ -118,7 +134,6 @@ export default function ComoFunciona() {
           </div>
         ))}
       </div>
-
     </section>
   );
 }

@@ -5,18 +5,19 @@ export default function Forms() {
     <section className="bg-primary">
       <div
         className="
-          min-h-screen
-          flex
-          flex-col
-          lg:flex-row
-          items-center
-          lg:gap-20
-          px-6
-          py-10
-          sm:px-10
-          md:px-16
-          lg:px-20
-        "
+            min-h-screen
+            flex
+            flex-col
+            lg:flex-row
+            items-center
+            justify-center
+            gap-10
+            lg:gap-20
+            px-6
+            py-10
+            sm:px-10
+            md:px-16
+            lg:px-20"
       >
 
         {/* TEXTO */}

@@ -4,29 +4,32 @@ export default function QuemSomos() {
   return (
     <section className="min-h-screen bg-white grid grid-cols-1 md:grid-cols-100">
 
-      {/* TEXTO - 3 COLUNAS */}
+      {/* TEXTO - 55% */}
       <div
         className="
           col-span-1
           md:col-span-55
           flex
           items-center
-          px-[2.5rem]
-          pl-[5rem]
-          pr-[10rem]
-        ">
-        <div className="w-full max-w-[650px] mx-auto">
+          px-6
+          sm:px-10
+          md:px-12
+          lg:px-16
+          xl:px-20
+        "
+      >
+        <div className="w-full max-w-[750px] mt-[2rem] mb-[2rem] mx-auto">
 
           <h2
             className="
-              text-[55px]
-              sm:text-[60px]
-              md:text-[66px]
+              text-[42px]
+              sm:text-[52px]
+              md:text-[60px]
+              lg:text-[66px]
               leading-[1]
               font-bold
               text-primary
               mb-8
-              text-justify
             "
           >
             Quem somos
@@ -34,9 +37,11 @@ export default function QuemSomos() {
 
           <div
             className="
-              text-[19px]
+              text-[17px]
+              sm:text-[18px]
+              md:text-[19px]
               text-primary
-              leading-[1.3]
+              leading-[1.4]
               space-y-6
               text-justify
             "
@@ -67,13 +72,13 @@ export default function QuemSomos() {
       </div>
 
 
-      {/* IMAGEM - 2 COLUNAS */}
+      {/* IMAGEM - 45% */}
       <div
         className="
           col-span-1
           md:col-span-45
           relative
-          min-h-[500px]
+          min-h-[400px]
           md:min-h-screen
           w-full
         "
@@ -83,7 +88,7 @@ export default function QuemSomos() {
           alt="Atendimento jurídico"
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, 40vw"
+          sizes="(max-width: 768px) 100vw, 45vw"
         />
       </div>
 

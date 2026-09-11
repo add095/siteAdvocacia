@@ -28,12 +28,15 @@ export default function QuemEstaFrente() {
   ];
 
   return (
-    <section className="min-h-screen bg-[#f2f3f4] px-[5git rem] py-[3rem]">
+    <section className="h-fit py-[5%] flex flex-col justify-center bg-[#f2f3f4] px-[2rem]">
 
       {/* Título */}
       <h2 className="
         text-center
-        text-[75px]
+        text-[42px]
+        sm:text-[52px]
+        md:text-[65px]
+        lg:text-[75px]
         leading-[1.1]
         font-bold
         text-[#07145C]
