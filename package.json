@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "lucide-react": "^1.41.0",
     "resend": "^6.25.0"
   }
 }

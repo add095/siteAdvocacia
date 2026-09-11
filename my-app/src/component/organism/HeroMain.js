@@ -11,7 +11,7 @@ export default function HeroMain() {
       bg-center
     ">
       <div className="
-        bg-black/70 
+        bg-[#030e50]/70 
         h-full 
         flex 
         pt-[5rem] 
@@ -67,16 +67,16 @@ export default function HeroMain() {
                 lg:text-[2rem]
                 max-w-[700px]
               ">
-                Entenda seus direitos antes de aceitar a negativa.
+                Antes de aceitar a negativa, entenda se o seu caso pode ser analisado juridicamente.
               </p>
 
               <Link
-                href={""}
+                href={"https://api.whatsapp.com/send/?phone=5541992700506&text=Ol%C3%A1%2C%20gostaria%20de%20orienta%C3%A7%C3%A3o!&type=phone_number&app_absent=0"}
                 className="
-                  bg-primary 
+                  bg-secundary 
                   rounded-[100px] 
                   text-subtopics 
-                  text-white 
+                  text-primary
                   font-bold 
                   flex 
                   items-center 
@@ -89,7 +89,7 @@ export default function HeroMain() {
                   sm:py-[1rem]
                   lg:px-[2.5rem]
 
-                  hover:bg-[#020d40]
+                  hover:bg-[#d8d6d7]
 
                 "
               >
