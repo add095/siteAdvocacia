@@ -28,7 +28,7 @@ export default function QuemEstaFrente() {
   ];
 
   return (
-    <section className="min-h-screen bg-[#f2f3f4] mt-[2.5rem] px-[2.5rem] py-[3rem]">
+    <section className="min-h-screen bg-[#f2f3f4] px-[5git rem] py-[3rem]">
 
       {/* Título */}
       <h2 className="
