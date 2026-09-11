@@ -1,23 +1,26 @@
 import Forme from "@/component/molecules/forme"
 
+
 export default function Forms() {
   return (
     <section className="bg-primary">
       <div
         className="
-          min-h-screen
-          flex
-          flex-col
-          lg:flex-row
-          items-center
-          lg:gap-20
-          px-6
-          py-10
-          sm:px-10
-          md:px-16
-          lg:px-20
-        "
+            min-h-screen
+            flex
+            flex-col
+            lg:flex-row
+            items-center
+            justify-center
+            gap-10
+            lg:gap-20
+            px-6
+            py-10
+            sm:px-10
+            md:px-16
+            lg:px-20"
       >
+
 
         {/* TEXTO */}
         <div className="w-full max-w-[700px] lg:w-[700px]">
@@ -38,12 +41,15 @@ export default function Forms() {
           </h2>
         </div>
 
+
         {/* FORMULÁRIO */}
         <div className="w-full max-w-[500px] lg:w-[750px]">
           <Forme />
         </div>
 
+
       </div>
     </section>
   );
 }
+

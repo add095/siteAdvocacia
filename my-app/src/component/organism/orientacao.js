@@ -23,9 +23,24 @@ const passos = [
 
 export default function ComoFunciona() {
   return (
-    <section className="w-full bg-[#f5f5f5] px-[5.5rem] py-16 sm:py-25">
+    <section
+      className="
+        w-full
+        bg-[#f5f5f5]
 
-      {/* Título */}
+        px-5
+        sm:px-8
+        md:px-12
+        lg:px-20
+        xl:px-[5.5rem]
+
+        py-12
+        sm:py-16
+        lg:py-24
+      "
+    >
+
+      {/* TÍTULO */}
       <h2
         className="
           text-center
@@ -33,58 +48,87 @@ export default function ComoFunciona() {
           font-bold
           font-poppins
           leading-[0.95]
-          text-[2.5rem]
-          sm:text-[3.5rem]
-          md:text-[4rem]
-          mb-10
+
+          text-[2rem]
+          sm:text-[2.8rem]
+          md:text-[3.5rem]
+          lg:text-[4rem]
+
+          mb-8
+          sm:mb-10
+          lg:mb-12
         "
       >
         Como funciona a
         <br />
-       <span className="
-            text-[4rem] 
-            sm:text-[4.5rem]
-            md:text-[5rem]"
-            >orientação jurídica?</span>
+
+        <span
+          className="
+            text-[2.7rem]
+            sm:text-[3.5rem]
+            md:text-[4.2rem]
+            lg:text-[5rem]
+          "
+        >
+          orientação jurídica?
+        </span>
       </h2>
 
-      {/* Passos */}
+
+      {/* PASSOS */}
       <div
         className="
+          w-full
           max-w-[900px]
           mx-auto
+
           grid
           grid-cols-1
           sm:grid-cols-2
+
           gap-3
+          sm:gap-4
         "
       >
         {passos.map((passo, index) => (
           <div
             key={index}
             className="
+              w-full
+              min-h-[120px]
+
               bg-[#07145C]
               text-white
+
               rounded-[10px]
-              min-h-[120px]
-              min-w-[250px]
+
               px-4
-              py-3
+              sm:px-5
+              py-4
+
               flex
               flex-col
               items-center
               justify-center
+
               text-center
-              mx-2
-              my-2
+
+              transition-transform
+              duration-200
+              hover:scale-[1.01]
             "
           >
-            {/* Passo */}
+
+            {/* PASSO */}
             <span
               className="
                 font-bold
                 font-poppins
+
                 text-[17px]
+                sm:text-[19px]
+                md:text-[20px]
+
                 leading-none
                 mb-2
               "
@@ -92,29 +136,40 @@ export default function ComoFunciona() {
               {passo.numero}
             </span>
 
-            {/* Título */}
+
+            {/* TÍTULO */}
             <h3
               className="
                 font-semibold
                 font-poppins
-                text-[17px]
-                leading-none
+
+                text-[15px]
+                sm:text-[16px]
+                md:text-[17px]
+
+                leading-tight
+
                 mb-1
               "
             >
               {passo.titulo}
             </h3>
 
-            {/* Descrição */}
+
+            {/* DESCRIÇÃO */}
             <p
               className="
                 font-poppins
-                text-[13px]
+
+                text-[12px]
+                sm:text-[13px]
+
                 leading-tight
               "
             >
               {passo.descricao}
             </p>
+
           </div>
         ))}
       </div>

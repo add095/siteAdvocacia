@@ -1,26 +1,34 @@
 "use client";
 
+
 import { useState } from "react";
+
 
 export default function Forms() {
   const [enviando, setEnviando] = useState(false);
+
 
   async function handleSubmit(event) {
     event.preventDefault();
     setEnviando(true);
 
+
     const form = event.currentTarget;
+
 
     const dados = {
       nome: form.nome.value,
       telefone: form.telefone.value,
 
+
       interesses: Array.from(
         form.querySelectorAll('input[name="interesse"]:checked')
       ).map((input) => input.value),
 
+
       outroCaso: form.outroCaso.value,
     };
+
 
     try {
       const resposta = await fetch("/api/enviar", {
@@ -31,22 +39,14 @@ export default function Forms() {
         body: JSON.stringify(dados),
       });
 
-      const resultado = await resposta.json();
 
-      if (resultado.success) {
-        alert("Formulário enviado com sucesso!");
-        form.reset();
-      } else {
-        alert("Erro ao enviar o formulário.");
-        console.error(resultado);
-      }
+      const resultado = await resposta.json();
     } catch (error) {
-      console.error(error);
-      alert("Não foi possível enviar o formulário.");
     } finally {
       setEnviando(false);
     }
   }
+
 
   return (
     <form
@@ -70,11 +70,11 @@ export default function Forms() {
               sm:text-[1.5rem]
               md:text-[1.5rem]
               lg:text-[2rem]
-              text-primary 
-              leading-none 
+              text-primary
+              leading-none
               font-poppins
       ">
-        Quero orientações com um advogado! 
+        Quero orientações com um advogado!
       </h3>
       {/* NOME */}
       <div>
@@ -84,6 +84,7 @@ export default function Forms() {
         >
           Nome
         </label>
+
 
         <input
           type="text"
@@ -104,6 +105,7 @@ export default function Forms() {
         />
       </div>
 
+
       {/* TELEFONE */}
       <div>
         <label
@@ -112,6 +114,7 @@ export default function Forms() {
         >
           Telefone
         </label>
+
 
         <input
           type="tel"
@@ -132,13 +135,16 @@ export default function Forms() {
         />
       </div>
 
+
       {/* INTERESSES */}
       <div>
         <p className="text-[12px] text-gray-700 mb-1.5">
           Seu caso envolve:
         </p>
 
+
         <div className="space-y-1.5">
+
 
           <label
             className="
@@ -162,10 +168,12 @@ export default function Forms() {
               className="w-3.5 h-3.5 shrink-0"
             />
 
+
             <span className="text-[12px] text-gray-800">
               Medicamento / tratamento negado pelo plano ou SUS
             </span>
           </label>
+
 
           <label
             className="
@@ -189,10 +197,12 @@ export default function Forms() {
               className="w-3.5 h-3.5 shrink-0"
             />
 
+
             <span className="text-[12px] text-gray-800">
               Doença rara
             </span>
           </label>
+
 
           <label
             className="
@@ -216,13 +226,16 @@ export default function Forms() {
               className="w-3.5 h-3.5 shrink-0"
             />
 
+
             <span className="text-[12px] text-gray-800">
               Oncologia
             </span>
           </label>
 
+
         </div>
       </div>
+
 
       {/* OUTRO CASO */}
       <div>
@@ -232,6 +245,7 @@ export default function Forms() {
         >
           Outro caso (conte brevemente)
         </label>
+
 
         <textarea
           id="outroCaso"
@@ -252,6 +266,7 @@ export default function Forms() {
           "
         />
       </div>
+
 
       {/* BOTÃO */}
       <button
@@ -274,6 +289,10 @@ export default function Forms() {
         {enviando ? "Enviando informações..." : "Enviar informações"}
       </button>
 
+
     </form>
   );
 }
+
+
+
