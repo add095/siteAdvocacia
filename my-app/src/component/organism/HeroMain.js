@@ -6,13 +6,13 @@ export default function HeroMain() {
   return (
     <section className="
       h-screen
-      bg-[url('/heroImage.jpg')]
+      bg-[url('/heroImage.png')]
       bg-cover
       bg-no-repeat
       bg-center
     ">
       <div className="
-        bg-[#030e50]/85
+        bg-[#030e50]/70
         h-full
         flex
         pt-[5rem]
