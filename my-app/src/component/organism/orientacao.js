@@ -12,12 +12,12 @@ const passos = [
   {
     numero: "Passo 3",
     titulo: "Você recebe um retorno claro",
-    descricao: "Sem juridiquês. Sem enrolação.",
+    descricao: "Sem juridiquês.",
   },
   {
     numero: "Passo 4",
     titulo: "Você decide o próximo passo",
-    descricao: "Com informação, não com pressão.",
+    descricao: "Com informação e acolhimento.",
   },
 ];
 
