@@ -22,7 +22,7 @@ const areas = [
     icone: "/svgs/autismo.svg",
   },
   {
-    nome: "BPC/LOAS",
+    nome: "BPC/LOAS e Aposentadoria PCD",
     icone: "/svgs/losangulo.svg",
   },
   {
